@@ -1,7 +1,7 @@
 ##############################################################################
 # This source file is part of the NWChemOutputToJson project.
-# Copyright (c) 2016, The Regents of the University of California, through 
-# Lawrence Berkeley National Laboratory (subject to receipt of any required 
+# Copyright (c) 2016, The Regents of the University of California, through
+# Lawrence Berkeley National Laboratory (subject to receipt of any required
 # approvals from the U.S. Dept. of Energy).
 # This source code is released under the BSD 3-Clause License, (the "License").
 # Unless required by applicable law or agreed to in writing, software
@@ -17,20 +17,20 @@ from nwchem2json import nwchemToJson
 
 
 def main(argv=None):
-    if sys.argv[1] == 'noOrbitals':
-      start = 2
-      argument = 'noOrbitals'
-    else:
-      start = 1
-      argument = ''
-    for files in range(start,len(sys.argv)):
-      fileIn = open(sys.argv[files],'r')
-      fileOut = open(sys.argv[files]+'.json','w')
-      print('Converting file ',sys.argv[files])
-      jsonObj = nwchemToJson.nwchemToJson(argument)
-      fileOut.write(jsonObj.convert(fileIn))
-      fileIn.close()
-      fileOut.close()
+  if sys.argv[1] == 'noOrbitals':
+    start = 2
+    argument = 'noOrbitals'
+  else:
+    start = 1
+    argument = ''
+  for files in range(start, len(sys.argv)):
+    fileIn = open(sys.argv[files], 'r')
+    fileOut = open(sys.argv[files] + '.json', 'w')
+    print('Converting file ', sys.argv[files])
+    jsonObj = nwchemToJson.nwchemToJson(argument)
+    fileOut.write(jsonObj.convert(fileIn))
+    fileIn.close()
+    fileOut.close()
 
 
 if __name__ == '__main__':

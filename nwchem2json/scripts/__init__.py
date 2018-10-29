@@ -1,7 +1,7 @@
 ##############################################################################
 # This source file is part of the NWChemOutputToJson project.
-# Copyright (c) 2018, The Regents of the University of California, through 
-# Lawrence Berkeley National Laboratory (subject to receipt of any required 
+# Copyright (c) 2018, The Regents of the University of California, through
+# Lawrence Berkeley National Laboratory (subject to receipt of any required
 # approvals from the U.S. Dept. of Energy).
 # This source code is released under the BSD 3-Clause License, (the "License").
 # Unless required by applicable law or agreed to in writing, software
@@ -10,4 +10,3 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 ##############################################################################
-
