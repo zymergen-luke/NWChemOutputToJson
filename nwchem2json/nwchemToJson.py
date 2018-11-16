@@ -495,6 +495,15 @@ class nwchemToJson:
             break
           line=streamIn.readline()
         self.calcRes['molecule'] = self.molecule.molecule
+      elif line.find('Failed to converge')>=0:
+        unconverged_molecule = moleculeObj()
+        line = streamIn.readline()
+        while line:
+          if 'Geometry "' in line:
+            unconverged_molecule.readGeom(line, streamIn)
+            break
+          line = streamIn.readline()
+        self.calcRes['unconvergedMolecule'] = unconverged_molecule.molecule
       elif  line.find('Task  times')>=0:
         self.calcTask['calculationTime'] = self.readTaskTimes(line)
         break
