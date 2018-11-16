@@ -27,7 +27,7 @@ def main(argv=None):
     help='Output json file to write')
   args = parser.parse_args(argv)
 
-  if len(args.files > 1 and args.outfile):
+  if len(args.files) > 1 and args.outfile:
     parser.error('may not specify -o when converting multiple files')
 
   for filename in args.files:
